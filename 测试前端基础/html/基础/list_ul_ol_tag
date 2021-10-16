@@ -1,0 +1,37 @@
+列表标签：
+        1：ul(无序标签)，type属性可以改变无序列表项目符合,可以在ul标签或者li标签加入，包含
+            （1）disc，默认值，实心的圆点
+            （2)square，实心的方块
+             (3)circle，空心的圆
+        语法：
+        <body>
+		<ul type = "circle">
+			<li >第一天</li>
+			<li>第二天</li>
+		</ul>
+		</body>
+		或者
+		        <body>
+		<ul >
+			<li type = "circle">第一天</li>
+			<li type = "circle">第二天</li>
+		</ul>
+		</body>
+        2. ol(有序标签),type属性可以改变无序列表项目符合,可以在ol标签或者li标签加入，包含
+            （1）1默认值，使用阿拉伯数字
+            （2）a/A 采用小写或大写字母作为序号
+            （3）i/I 采用小写或大写的罗马数字作为序号
+                语法：
+        <body>
+		<ol type = "1"或者"a">
+			<li >第一天</li>
+			<li>第二天</li>
+		</ol>
+		</body>
+		或者
+		        <body>
+		<ol >
+			<li type = "1"或者"a">第一天</li>
+			<li type = "1"或者"a">第二天</li>
+		</ol>
+		</body>
