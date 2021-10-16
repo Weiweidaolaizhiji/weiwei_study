@@ -1,45 +1,66 @@
-<!DOCTYPE html>
-<html lang="zh">
-    <head>
-        <meta charset="UTF-8"> <title>表单</title>
-    </head>
-    <body>
-        <form action="reg.html" method="get">
-                用户名：
-                <input type="text" name="username" placeholder="请输入用户名"/
-                <br/>
-                密码框：
-                <input type="password" name="password"/>
-                <br/>
-                性别：
-                <input type="radio" name="sex" id="nan"/>
-                <label for="nan">男</label>
-                <input type="radio" name="sex" id="nv" checked="checked"/>
-                <label for="nv">女</label> <br/>
-                你的爱好：
-                <input type="checkbox" id="cs" checked="checked"/>
-                <label for="cs">测试 </label>
-                <input type="checkbox" id="cf"/>
-                <label for="cf">吃饭</label>
-                <input type="checkbox" checked="checked"/>睡觉
-                <input type="checkbox"/>打豆豆
-                <br/>
-                你来自哪里：
-                <select name="city" id="city">
-                    <option value="bj">北京</option>
-                    <option value="sh">上海</option>
-                    <option value="wz">广州</option>
-                    <option value="sz" selected="selected">深圳</option>
-                </select>
-                    <br/>
-                建议：
-                <textarea name="message" cols="30" rows="3" placeholder="请填写建议">
+一、表单的用户体验提升
+1、可以添加placeholder属性，可以给文本框设置提示文字
+例：placeholder="请输入用户名"
+2、如果是专门写表单的页面，可以给第一个输入框设置一个默认获取鼠标焦点的属性autofocus
+例：autofocus="autofocus"
+注意：tab可以让光标前进，shift+tab可以光标后退
+二、css基础
+css定义：可以设置网页中的样式、外观、美化
+css中文名字：级联样式表、层叠样式表、样式表
+三、css基础语法
+1、style标签写在title标签的后面
+2、选择器{ 属性名1:属性值1; 属性名2:属性值2; }
+color 代表颜色
+font-size 代表字号，px代表像素单位（在css中90%以上的情况，数字后面必须跟单位）
+例：
+		<style type="text/css">
+			div{ color: red; font-size: 100px; }
+		</style>
+四、开发人员调试工具
+1、打开方式：f12或在网页中右键--检测
+2、找到菜单中的第一个选项：elements（元素、标签、标记）
+3、用鼠标左键点击想要查看的标签
+4、右侧就会出现对应的css代码
+5、想设置颜色：点击颜色前面的方框，使用调色盘改变颜色后，别忘了把颜色的代码放在程序中；
+6、设置数字大小：鼠标左键点击数字，按键盘的上、下可以调整大小，最终的代码也要自己更改才可以生效
 
-                </textarea>
-                <br/>
-                <input type="button" value="普通按钮"/>
-                <input type="reset" value="重置按钮"/>
-                <input type="submit" value="提交按钮"/>
-        </form>
-    </body>
-</html>
+五、标签选择器
+选择器：在大括号之前写的内容，就是选择器，找到你要选择的内容
+标签选择器：用标签的名字来进行页面元素、标签、标记的选择
+例：
+p{color: #edff05;}
+六、id选择器
+id选择器：用html标签中的id属性来进行选取的方式
+语法规则：
+		#id的值{xxx}
+		<p id="id的值">xxx</p>
+
+例：
+#p1{color: red;}
+<p id="p1">黑马</p>
+七、命名规则
+1、不能数字开头
+2、不能使用中划线、下划线之外的符号
+3、不推荐中文
+4、尽量做到见名知意(看到名字就知道意思)
+唯一性：
+1、id命名不可以重复使用；在js中会因为id的命名冲突而导致报错
+2、每个标签只能有一组id
+八、class类选择器
+	类选择器：使用html中的class的值来进行选取的方式
+		语法：
+			.类名2{xx}
+			<p class="类名1 类名2 类名3">xx</p>
+		注意：class类选择器可以重复命名； 每个标签可以有多个class类名，中间使用空格分割即可
+		命名的规则：与id的命名规则完全一样
+九、css书写位置、引入方式
+1、内嵌式：css写在style标签中，放在title标签的后面；因为html代码和css代码混在同一个文件中
+2、外链式：css代码和html代码，实现代码的分离效果，使用link标签设置href属性，即可单独把css文件链入到当前的html文件中
+例：
+<link rel="stylesheet" type="text/css" href="css.css"/>
+应用场景：
+	1、内嵌式应用在电商网站首页，因为对网页的打开速度有严格的要求，一次性把html和css都加载进来；
+	2、外链式应用在除了电商网站首页，实现代码的分离，方便后期修改
+3、了解行内式：css代码写在标签的身上，强烈不推荐使用！修改不方便、重复代码太多，导致页面加载速度变慢！
+例：以下写法就是反面教材！！！
+<p style="color: red;">黑马</p>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+		<!--
+			form表单标签里面就是所有用户填写的表单数据；
+			action="xxx.jsp"   把表单数据提交给哪一个后台程序去处理
+
+			method="post"   传递数据时候的方式方法，post代表隐式提交数据；get明文传送数据
+		-->
+		<form action="xxx.py" method="get">
+			<!--
+				中文的冒号，为了防止生成代码错误；
+				input + tab 键来生成代码；
+				type="text" 普通的输入框
+				placeholder="请输入用户名"  文字提醒
+			-->
+			用户名：<input type="text" placeholder="请输入用户名" />
+			<br />
+			<!--
+				type="password"   密码框
+			-->
+			密码框：<input type="password" />
+			<br />
+
+			性别：
+				<!--
+					type="radio"   单选框
+					checked="checked"   此属性可以表达默认选中状态
+					测试细节：
+						1、点击查看是否为单选效果
+						2、刷新的时候是否有默认选中的状态
+						3、点击文字是否可以进行切换
+				-->
+
+				<input type="radio" name="xb" checked="checked" value="nan" />
+				<label for="nan">男</label>
+
+
+				<input type="radio" name="xb" value="nv" />
+				<label for="nv">女</label>
+
+				<br />
+
+				你的爱好：
+				<!--
+					type="checkbox"  多选框、复选框
+					checked="checked"  默认选中
+					测试细节：
+						1、刷新的时候是否有默认选中的状态
+						2、点击文字是否可以进行切换
+					一切测试要追溯到用户的需求
+				-->
+				<input type="checkbox" id="cs" checked="checked" />
+				<label for="cs">测试</label>
+
+				<input type="checkbox" id="cf" />
+				<label for="cf">吃饭</label>
+
+				<input type="checkbox" id="sj" />
+				<label for="sj">睡觉</label>
+
+				<input type="checkbox" id="ddd" checked="checked" />
+				<label for="ddd">打豆豆</label>
+
+				<br />
+
+				来自：
+				<!--
+					select标签嵌套若干option标签，每组option就是一个下拉菜单中的选项
+					selected="selected"   下拉菜单的默认选中
+					测试细节：
+						1、内容的顺序
+						2、默认选中的状态
+						3、内容的条数
+				-->
+				<select>
+					<option>北京</option>
+					<option>上海</option>
+					<option>广州</option>
+					<option selected="selected">深圳</option>
+				</select>
+
+				<br />
+
+				<!--
+					textarea  文本域
+					测试细节：
+						1、测试三大主流浏览器外观大小是否一致
+						2、提醒程序员禁用拖拽大小的功能
+				-->
+				<style type="text/css">
+					textarea{resize: none;}
+				</style>
+
+				意见：<textarea name="" id="" cols="30" rows="10"></textarea>
+
+				<br />
+
+				<!--
+					type="button"  普通按钮，需要js配合才能实现其它效果
+					value属性设设置按钮身上的文字
+				-->
+				普通按钮：<input type="button" value="按钮" />
+				<br />
+
+				<!--
+					type="reset"  点击后可以让表单数据恢复默认值
+					value属性设设置按钮身上的文字
+				-->
+				重置按钮：<input type="reset" value="我是重置" />
+				<br />
+				<!--
+					type="submit"  点击后可以让表单提交给指定后台处理
+					value属性设设置按钮身上的文字
+					点击后无论是否报错，都与我们无关，最终测试的时候，只要关注数据库中的内容是否正常添加即可
+				-->
+				提交按钮：<input type="submit" value="我是提交" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+HTML 表单
+        1.用于搜集不同类型的用户输入，表单标签里面就是所有用户填写的表单数据。
+        语法：<body>
+		            <form action="xxx.jsp" method="get">
+
+		            </form>
+	          </body>
+	    【注】1.action="xxx.jsp"   把表单数据提交给哪一个后台程序去处理
+			   2.method="post"   传递数据时候的方式方法，post代表隐式提交数据；get明文传送数据
+        2.表单包含表单元素。,表单元素指的是不同类型的 input 元素、复选框checkbox、单选按钮、提交按钮submit等等
+        语法：
+        1.<input> 元素，根据不同的 type 属性表示不同形态，主要有（1）text	 定义常规文本输入。
+                                                                      （2) radio 定义单选按钮输入（选择多个选择之一）
+                                                                       (3)submit 定义提交按钮（提交表单）
+         例：<form>
+                 First form:<br>
+                <input type="text" name="firstform",placeholder="请输入用户名" >
+                <br>
+             </form>
+         【注】1.placeholder="请输入用户名"  为文本框的文字提醒
+               2. type="password"为输入密码，加密显示
+         2.单选按钮输入,<input type="radio"> 定义单选按钮。单选按钮允许用户在有限数量的选项中选择其中之一
+         例：<form>
+                <input type="radio" name="sex" value="male" checked>
+                <br>
+                <input type="radio" name="sex" value="female">
+                <label for="femal">女</label>
+            </form>
+         【注】checked表示默认显示，value是按钮显示的名字
+         3.普通按钮<input type="button"> 、重置按钮<input type=reset"> 、提交按钮 <input type="submit"> 定义用于向表单处理程序（form-handler）提交表单的按表单处理程序通常是包含用来处理输入数据的脚本的服务器页面
+        例：<form action="action_page.php">
+                    First form:<br>
+                    <input type="text" name="firstform" value="Mickey">
+                    <br>
+                    <input type="submit" value="Submit">
+            </form>
+         4. <fieldset> </fieldset> 组合表单数据,<fieldset> 元素组合表单中的相关数据可以用<legend> 元素为 <fieldset> 元素定义标题
+        例：<form action="action_page.php">
+                <fieldset>
+                <legend>Personal information:</legend>
+                First form:<br>
+                <input type="text" name="firstform" value="Mickey">
+                <br>
+                <input type="submit" value="Submit"></fieldset>
+            </form>
+        5.复选按钮输入,<input type="checkbox"> 定义复选按钮。复选按钮允许用户在有限数量的选项中选择其多个
+         例：<form>
+                <input type="checkbox" name="sex" value="male" checked>
+                <label for="male">男</label>
+                <br>
+                <input type="checkbox" name="sex" value="female">
+                <label for="femal">女</label>
+            </form>
+         【注】checked表示默认显示
+         6.选择按钮输入,进行下拉框选择
+         例：<form>
+                <select>
+					<option>北京</option>
+					<option>上海</option>
+					<option>广州</option>
+					<option selected="selected">深圳</option>
+				</select>
+            </form>
+         【注】selected表示默认显示

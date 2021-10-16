@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<!--
+			内嵌式：css写在style标签中，放在title标签的后面；因为html代码和css代码混在同一个文件中
+		-->
+		
+		<style type="text/css">
+			.bz{color: red;}
+			.ldxns{font-size: 50px;}
+			/*
+			 类选择器：使用html中的class的值来进行选取的方式
+			 语法：
+			 	.类名{xx}
+			 	<p class="类名">xx</p>
+			注意：class类选择器可以重复命名； 每个标签可以有多个class类名，和顺序没有关系，
+			使用空格分割多个class类名
+			命名的规则：与id的命名规则完全一样
+			 * 
+			 * */
+		</style>
+	</head>
+	<body>
+		<p class="bz ldxns">自强不息，厚德载物！</p>
+		<p>自强不息，厚德载物！</p>
+		<p class="bz">自强不息，厚德载物！</p>
+		<p>自强不息，厚德载物！</p>
+		<div class="ldxns">自强不息，厚德载物！</div>
+		<div>自强不息，厚德载物！</div>
+		<div class="ldxns bz">黄河之水天上来</div>
+		<div>自强不息，厚德载物！</div>
+
+	</body>
+</html>
