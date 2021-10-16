@@ -1,0 +1,10 @@
+空格和回车标签：
+            1.空格：   &nbsp;
+            2.换行、回车：<br />
+            3:语法：<body>
+                            我是&nbsp;&nbsp奥特曼【注】两个空格
+                            <br/>【注】回车一行
+                            我是&nbsp;&nbsp;&nbsp;&nbsp奥特曼
+                            <br>
+                            <br >
+	                </body>
