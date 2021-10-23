@@ -1,0 +1,16 @@
+一、搭建环境步骤（Windows）
+1.准备工作
+集成环境安装包：phpstudy
+项目部署包：tpshop
+部署文档
+安装集成环境：
+        web服务器：apache
+        数据库：mysql
+二、部署项目
+将TPshop项目压缩包解压后文件夹里的全部内容放入phpStudy安装路径D:\phpStudy\WWW中
+2.域名的设置（扩展）
+进入目录C:\Windows\System32\drivers\etc
+用记事本打开hosts文件
+127.0.0.1 www.tpshop.com
+保存退出
+浏览器通过域名访问商城
